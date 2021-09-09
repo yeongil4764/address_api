@@ -10,13 +10,14 @@ exports.ContactsModule = void 0;
 const common_1 = require("@nestjs/common");
 const contacts_controller_1 = require("./contacts.controller");
 const contacts_service_1 = require("./contacts.service");
-const prisma_service_1 = require("./prisma.service");
+const prisma_service_1 = require("../prisma/prisma.service");
 let ContactsModule = class ContactsModule {
 };
 ContactsModule = __decorate([
     common_1.Module({
         controllers: [contacts_controller_1.ContactsController],
-        providers: [contacts_service_1.ContactsService, prisma_service_1.PrismaService]
+        providers: [contacts_service_1.ContactsService, prisma_service_1.PrismaService],
+        exports: [prisma_service_1.PrismaService]
     })
 ], ContactsModule);
 exports.ContactsModule = ContactsModule;

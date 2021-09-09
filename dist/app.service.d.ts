@@ -1,3 +1,7 @@
+import { Prisma, User } from '.prisma/client';
+import { PrismaService } from './prisma/prisma.service';
 export declare class AppService {
-    getHello(): string;
+    private prisma;
+    constructor(prisma: PrismaService);
+    register(userCreateInput: Prisma.UserCreateInput): Promise<User>;
 }

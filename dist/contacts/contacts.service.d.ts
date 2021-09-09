@@ -1,5 +1,5 @@
 import { Contact, Prisma } from '@prisma/client';
-import { PrismaService } from './prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 export declare class ContactsService {
     private prisma;
     constructor(prisma: PrismaService);
