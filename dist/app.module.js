@@ -18,8 +18,8 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     common_1.Module({
         imports: [contacts_module_1.ContactsModule, auth_module_1.AuthModule, user_module_1.UserModule],
-        providers: [app_service_1.AppService],
         controllers: [app_controller_1.AppController],
+        providers: [app_service_1.AppService],
     })
 ], AppModule);
 exports.AppModule = AppModule;

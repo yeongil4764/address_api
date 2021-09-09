@@ -1,6 +1,6 @@
-import { Prisma, User } from ".prisma/client";
-import { AppService } from "./app.service";
-import { AuthService } from "./auth/auth.service";
+import { Prisma, User } from '.prisma/client';
+import { AppService } from './app.service';
+import { AuthService } from './auth/auth.service';
 export declare class AppController {
     private authService;
     private appService;

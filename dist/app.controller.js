@@ -15,9 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppController = void 0;
 const client_1 = require(".prisma/client");
 const common_1 = require("@nestjs/common");
+const passport_1 = require("@nestjs/passport");
 const app_service_1 = require("./app.service");
 const auth_service_1 = require("./auth/auth.service");
-const local_auth_guard_1 = require("./auth/guard/local-auth.guard");
 let AppController = class AppController {
     constructor(authService, appService) {
         this.authService = authService;
@@ -27,6 +27,7 @@ let AppController = class AppController {
         return await this.appService.register(userCreateInput);
     }
     login(req) {
+        console.log('login');
         return this.authService.login(req.user);
     }
 };
@@ -38,8 +39,8 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "register", null);
 __decorate([
-    common_1.UseGuards(local_auth_guard_1.LocalAuthGuard),
     common_1.Post('login'),
+    common_1.UseGuards(passport_1.AuthGuard('local2')),
     __param(0, common_1.Request()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
@@ -47,7 +48,8 @@ __decorate([
 ], AppController.prototype, "login", null);
 AppController = __decorate([
     common_1.Controller(),
-    __metadata("design:paramtypes", [auth_service_1.AuthService, app_service_1.AppService])
+    __metadata("design:paramtypes", [auth_service_1.AuthService,
+        app_service_1.AppService])
 ], AppController);
 exports.AppController = AppController;
 //# sourceMappingURL=app.controller.js.map

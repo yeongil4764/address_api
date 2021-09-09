@@ -10,7 +10,7 @@ import { AppService } from './app.service';
 
 @Module({
   imports: [ContactsModule, AuthModule, UserModule],
-  providers: [AppService],
   controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
