@@ -32,22 +32,22 @@ let AppController = class AppController {
     }
 };
 __decorate([
-    common_1.Post('register'),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)('register'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "register", null);
 __decorate([
-    common_1.Post('login'),
-    common_1.UseGuards(passport_1.AuthGuard('local2')),
-    __param(0, common_1.Request()),
+    (0, common_1.Post)('login'),
+    (0, common_1.UseGuards)((0, passport_1.AuthGuard)('local2')),
+    __param(0, (0, common_1.Request)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Object)
 ], AppController.prototype, "login", null);
 AppController = __decorate([
-    common_1.Controller(),
+    (0, common_1.Controller)(),
     __metadata("design:paramtypes", [auth_service_1.AuthService,
         app_service_1.AppService])
 ], AppController);

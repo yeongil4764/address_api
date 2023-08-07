@@ -14,7 +14,7 @@ const prisma_service_1 = require("../prisma/prisma.service");
 let ContactsModule = class ContactsModule {
 };
 ContactsModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         controllers: [contacts_controller_1.ContactsController],
         providers: [contacts_service_1.ContactsService, prisma_service_1.PrismaService],
         exports: [prisma_service_1.PrismaService]

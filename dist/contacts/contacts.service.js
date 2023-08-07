@@ -38,7 +38,7 @@ let ContactsService = class ContactsService {
     }
 };
 ContactsService = __decorate([
-    common_1.Injectable(),
+    (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [prisma_service_1.PrismaService])
 ], ContactsService);
 exports.ContactsService = ContactsService;
