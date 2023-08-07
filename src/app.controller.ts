@@ -1,5 +1,5 @@
 import { Prisma, User } from '@prisma/client';
-import { Body, Controller, Post, Request, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Post, Request, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { AppService } from './app.service';
 import { AuthService } from './auth/auth.service';
@@ -11,6 +11,11 @@ export class AppController {
     private authService: AuthService,
     private appService: AppService,
   ) {}
+
+  @Get('')
+  async debugPrint(): Promise<any> {
+    return await this.appService.debugprint();
+  }
 
   @Post('register')
   async register(
