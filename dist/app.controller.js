@@ -13,7 +13,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppController = void 0;
-const client_1 = require(".prisma/client");
+const client_1 = require("@prisma/client");
 const common_1 = require("@nestjs/common");
 const passport_1 = require("@nestjs/passport");
 const app_service_1 = require("./app.service");

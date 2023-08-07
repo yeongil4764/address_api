@@ -1,4 +1,4 @@
-import { Prisma, User } from '.prisma/client';
+import { Prisma, User } from '@prisma/client';
 import { Body, Controller, Post, Request, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { AppService } from './app.service';
